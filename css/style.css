@@ -1,0 +1,133 @@
+
+@font-face {
+    font-family: 'GoudyInitialen';
+    src: url('GoudyIni.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+    /* url('css/GoudyIni.woff') format('woff'), Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+ 
+ body {
+     background-color: #FFF8F1;
+     font-family: 'Montserrat', cursive;
+ }
+
+ /* div {
+    display: inline-block;
+    border: 1px solid lightgray;
+   
+} */
+
+.spacer {
+    height: 90px;
+}
+
+.light { 
+    color:  #FFF8F1;
+}
+
+.german-font {
+    font-family: 'UnifrakturCook', cursive;
+}
+
+.english-font {
+    font-family: 'Grenze Gotisch', cursive;
+}
+
+.manuscript-font {
+    font-family: 'GoudyInitialen';
+    font-size: 200px;
+}
+
+.nav-head {
+    font-size: 96px;
+}
+
+.content-wrapper {
+    margin-top: 90px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.navbar-tab { 
+    fill: #FFF8F1;
+    stroke: #221812;
+    stroke-width: 3px;
+    /* #221812 */
+
+    padding: 15px;
+    margin-top: 1em;
+
+    font-size: 60px;
+    color: #FFF8F1;
+}
+
+.navbar-tab-txt {
+    font-size: 70px;
+}
+
+.active-tab {
+    fill: #221812;
+    stroke: #221812;
+    stroke-width: 3px;
+}
+
+.active-tab-txt {
+    fill: #FFF8F1;
+    font-size: 70px;
+    /* stroke: #221812;
+    stroke-width: 3px; */
+}
+
+
+
+#lead-card {
+    height: 100vh;
+    background-color: #221812;
+}
+
+#nav-card {
+    height: 200vh;
+}
+
+#splash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 60vh;
+}
+
+#title-text {
+    font-size: 132px;
+    color: #FFF8F1;;
+}
+
+#assignment-info {
+    text-align: left;
+    padding: 30px 30px;
+    height: 20vh;
+    margin-left: 1em;
+    
+    color:  #FFF8F1;
+}
+
+#nav-head-eng {
+    text-align: left;
+    padding-left: 240px;
+}
+#nav-head-deu {
+    text-align: right;
+    padding-right: 240px;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#navbar-wrapper {
+    width: 90%;
+    margin-left: 5%;
+}
