@@ -37,6 +37,21 @@ german_corpus_urls = [
     '../data/germanfairytales/derrauberbrautigem.txt',
 ]
 
+# emotional index keywords, so no magic words on index into lexicon
+ANGER = 0
+ANTICIPATION = 1
+DISGUST = 2
+FEAR = 3
+JOY = 4
+NEGATIVE = 5
+POSITIVE = 6
+SADNESS = 7
+SURPRISE = 8
+TRUST = 9
+
+TERM = 0
+EMOTION = 1
+VALUE = 2
 
 
 # open a text and return a list of its tokens, cleaned up
@@ -49,13 +64,81 @@ def import_text(text_url):
     
     return token_list
 
+def get_title(text_url):
+    with open(text_url) as t:
+        return t.readline().strip()
+
 # generate corpus
 def generate_corpus(corpus_urls):
-    corpus_tokens = []
+    corpus_tokens = {}
     for url in corpus_urls:
-        corpus_tokens.append( import_text(url) )
+        corpus_tokens[get_title(url)] = import_text(url) 
     return corpus_tokens
 
+# open NCR lexicon, return as a dictionary containing relevant values
+def compile_lexicon(url_to_lexicon):
+    lexicon = {}
+    with open(url_to_lexicon) as file:
+        for l in file.readlines():
+            elements = l.split()
+            term = elements[TERM]
+            # if(elements[EMOTION]=="anger"):
+            #         print(term)
+            if term in lexicon:
+                lexicon[term][convert_emotion_to_index(elements[EMOTION])] += int(elements[VALUE])
+            else:
+                lexicon[term] = [0,0,0,0,0,0,0,0,0,0]
+                lexicon[term][convert_emotion_to_index(elements[EMOTION])] += int(elements[VALUE]) 
+    # print(lexicon)
+    return lexicon   
+
+def convert_emotion_to_index(emotion):
+    if emotion == 'anger':
+        return 0
+    elif emotion == 'anticipation':
+        return 1
+    elif emotion == 'disgust':
+        return 2
+    elif emotion == 'fear':
+        return 3
+    elif emotion == 'joy':
+        return 4
+    elif emotion == 'negative':
+        return 5
+    elif emotion == 'positive':
+        return 6
+    elif emotion == 'sadness':
+        return 7
+    elif emotion == 'surprise':
+        return 8
+    elif emotion == 'trust':
+        return 9
+    else:
+        return -1 # error out
+
+def convert_index_to_emotion(index):
+    if index == 0:
+        return 'anger'
+    elif index == 1:
+        return 'anticipation'
+    elif index == 2:
+        return 'disgust'
+    elif index == 3:
+        return 'fear'
+    elif index == 4:
+        return 'joy'
+    elif index == 5:
+        return 'negative'
+    elif index == 6:
+        return 'positive'
+    elif index == 7:
+        return 'sadness'
+    elif index == 8:
+        return 'surprise'
+    elif index == 9:
+        return 'trust'
+    else:
+        return 'invalid'
 
 # write data to .json file
 def write_output(data, lang):
@@ -64,11 +147,51 @@ def write_output(data, lang):
         json.dump(data, output_file)
     return 0
 
+def count_emotive_tokens(story):
+    print()
+
+def calculate_corpus_emotive_scores(corpus, lexicon):
+    emotive_corpus = {}
+    for title in corpus:
+        emotive_scores = {
+            "anger": 0,
+            "anticipation": 0,
+            "disgust": 0,
+            "fear": 0,
+            "joy": 0,
+            "negative": 0,
+            "positive": 0,
+            "sadness": 0,
+            "surprise": 0,
+            "trust": 0
+        }
+        for token in corpus[title]:
+            if token in lexicon:
+                for i in range(0,10):
+                    emotive_scores[convert_index_to_emotion(i)] += lexicon[token][i]
+        
+        emotive_corpus[title] = emotive_scores
+    return emotive_corpus
+
+
 
 def primary():
     # print(generate_corpus(english_corpus_urls))
-    # print(english_corpus_urls)
-    print(generate_corpus(german_corpus_urls))
+    #print(english_corpus_urls)
+    # print(generate_corpus(german_corpus_urls))
+    # print(compile_lexicon("./NRC-Emotion-Lexicon-Wordlevel-v0.92.txt"))
+
+    english_corpus = generate_corpus(english_corpus_urls)
+    german_corpus = generate_corpus(german_corpus_urls)
+
+    lexicon_path = "./NRC-Emotion-Lexicon-Wordlevel-v0.92.txt"
+    lexicon = compile_lexicon(lexicon_path)
+
+    english_emotive_scores = calculate_corpus_emotive_scores(english_corpus, lexicon) 
+    german_emotive_scores = calculate_corpus_emotive_scores(german_corpus, lexicon) 
+
+    write_output(english_emotive_scores, "english")
+    write_output(german_emotive_scores, "german")
 
 if __name__ == "__main__":
     print("launch")
