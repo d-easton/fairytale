@@ -1,0 +1,26 @@
+{
+    "The Three Heads of the Well": {
+        "anger": 17,
+        "anticipation": 55, 
+        "disgust": 14, 
+        "fear": 25, 
+        "joy": 57, 
+        "negative": 31, 
+        "positive": 95, 
+        "sadness": 16, 
+        "surprise": 23, 
+        "trust": 33
+    },
+    "Frau Holle:Mother Hulda": {
+        "anger": 10, 
+        "anticipation": 38, 
+        "disgust": 16, 
+        "fear": 10, 
+        "joy": 37, 
+        "negative": 54, 
+        "positive": 59, 
+        "sadness": 33,
+        "surprise": 12, 
+        "trust": 36
+    }
+}

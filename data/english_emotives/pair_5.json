@@ -1,0 +1,26 @@
+{
+    "The Fish and the Ring": {
+        "anger": 9, 
+        "anticipation": 30, 
+        "disgust": 5, 
+        "fear": 14,
+        "joy": 16, 
+        "negative": 18, 
+        "positive": 43, 
+        "sadness": 12, 
+        "surprise": 12, 
+        "trust": 28
+    },
+    "Der Teufel mit den drei goldenen Haaren:The Devil with three Golden Hairs": {
+        "anger": 47, 
+        "anticipation": 84, 
+        "disgust": 57, 
+        "fear": 49, 
+        "joy": 51, 
+        "negative": 87, 
+        "positive": 100, 
+        "sadness": 47, 
+        "surprise": 22, 
+        "trust": 42
+    }
+}

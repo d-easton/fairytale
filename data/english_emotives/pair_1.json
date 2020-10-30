@@ -1,0 +1,26 @@
+{
+    "The Master and His Pupil": {
+        "anger": 15, 
+        "anticipation": 7,
+        "disgust": 13, 
+        "fear": 15, 
+        "joy": 5, 
+        "negative": 32, 
+        "positive": 30, 
+        "sadness": 14, 
+        "surprise": 5, 
+        "trust": 10
+    },
+    "Der Zauberlehrling:The Sorcerer's Apprentice": {
+        "anger": 8, 
+        "anticipation": 12, 
+        "disgust": 13,
+        "fear": 14, 
+        "joy": 8, 
+        "negative": 22, 
+        "positive": 24, 
+        "sadness": 6, 
+        "surprise": 7, 
+        "trust": 19
+    }
+}

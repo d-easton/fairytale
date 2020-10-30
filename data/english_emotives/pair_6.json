@@ -1,0 +1,26 @@
+{
+    "Mr. Fox": {
+        "anger": 5, 
+        "anticipation": 21, 
+        "disgust": 4, 
+        "fear": 9, 
+        "joy": 23, 
+        "negative": 11, 
+        "positive": 48, 
+        "sadness": 8, 
+        "surprise": 10, 
+        "trust": 20
+    }, 
+    "Der R\u00e4uberbr\u00e4utigam:The Robber Bridegoom": {
+        "anger": 17, 
+        "anticipation": 58, 
+        "disgust": 15, 
+        "fear": 31, 
+        "joy": 43, 
+        "negative": 47, 
+        "positive": 70, 
+        "sadness": 26, 
+        "surprise": 14, 
+        "trust": 41
+    }
+}

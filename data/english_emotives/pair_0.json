@@ -1,0 +1,26 @@
+{
+    "The Well of the World's End": {
+        "anger": 10, 
+        "anticipation": 21, 
+        "disgust": 7, 
+        "fear": 9, 
+        "joy": 20, 
+        "negative": 28, 
+        "positive": 35, 
+        "sadness": 11, 
+        "surprise": 9, 
+        "trust": 22
+    }, 
+    "Die Froschk\u00f6nig oder der eiserne Heinrich:The Frong King, or Iron Henry": {
+        "anger": 11, 
+        "anticipation": 16, 
+        "disgust": 5, 
+        "fear": 13, 
+        "joy": 22, 
+        "negative": 30, 
+        "positive": 73, 
+        "sadness": 18, 
+        "surprise": 11, 
+        "trust": 17
+    }
+}

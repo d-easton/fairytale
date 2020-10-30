@@ -1,1 +1,122 @@
-{"Tom Tit Tot": {"anger": 13, "anticipation": 28, "disgust": 11, "fear": 20, "joy": 19, "negative": 41, "positive": 33, "sadness": 33, "surprise": 15, "trust": 18}, "The Master and His Pupil": {"anger": 15, "anticipation": 7, "disgust": 13, "fear": 15, "joy": 5, "negative": 32, "positive": 30, "sadness": 14, "surprise": 5, "trust": 10}, "The Rose-Tree": {"anger": 16, "anticipation": 30, "disgust": 9, "fear": 15, "joy": 34, "negative": 32, "positive": 45, "sadness": 20, "surprise": 11, "trust": 34}, "The History of Tom Thumb": {"anger": 36, "anticipation": 55, "disgust": 22, "fear": 47, "joy": 45, "negative": 85, "positive": 99, "sadness": 54, "surprise": 24, "trust": 52}, "The Fish and the Ring": {"anger": 9, "anticipation": 30, "disgust": 5, "fear": 14, "joy": 16, "negative": 18, "positive": 43, "sadness": 12, "surprise": 12, "trust": 28}, "Mr. Fox": {"anger": 5, "anticipation": 21, "disgust": 4, "fear": 9, "joy": 23, "negative": 11, "positive": 48, "sadness": 8, "surprise": 10, "trust": 20}, "How Jack Went to Seek his Fortune": {"anger": 5, "anticipation": 25, "disgust": 3, "fear": 5, "joy": 10, "negative": 9, "positive": 14, "sadness": 3, "surprise": 12, "trust": 14}, "Molly Whuppie": {"anger": 14, "anticipation": 13, "disgust": 11, "fear": 33, "joy": 4, "negative": 23, "positive": 31, "sadness": 18, "surprise": 5, "trust": 7}, "The Well of the World's End": {"anger": 10, "anticipation": 21, "disgust": 7, "fear": 9, "joy": 20, "negative": 28, "positive": 35, "sadness": 11, "surprise": 9, "trust": 22}, "The Three Heads of the Well": {"anger": 17, "anticipation": 55, "disgust": 14, "fear": 25, "joy": 57, "negative": 31, "positive": 95, "sadness": 16, "surprise": 23, "trust": 33}}
+{
+    "Tom Tit Tot": {
+        "anger": 13, 
+        "anticipation": 28, 
+        "disgust": 11, 
+        "fear": 20, 
+        "joy": 19, 
+        "negative": 41, 
+        "positive": 33, 
+        "sadness": 33, 
+        "surprise": 15, 
+        "trust": 18
+    }, 
+    "The Master and His Pupil": {
+        "anger": 15, 
+        "anticipation": 7,
+        "disgust": 13, 
+        "fear": 15, 
+        "joy": 5, 
+        "negative": 32, 
+        "positive": 30, 
+        "sadness": 14, 
+        "surprise": 5, 
+        "trust": 10
+    }, 
+    "The Rose-Tree": {
+        "anger": 16, 
+        "anticipation": 30, 
+        "disgust": 9, 
+        "fear": 15, 
+        "joy": 34,
+        "negative": 32, 
+        "positive": 45, 
+        "sadness": 20, 
+        "surprise": 11, 
+        "trust": 34
+    }, 
+    "The History of Tom Thumb": {
+        "anger": 36, 
+        "anticipation": 55, 
+        "disgust": 22, 
+        "fear": 47, 
+        "joy": 45, 
+        "negative": 85, 
+        "positive": 99,
+        "sadness": 54,
+        "surprise": 24,
+        "trust": 52
+    },
+    "The Fish and the Ring": {
+        "anger": 9, 
+        "anticipation": 30, 
+        "disgust": 5, 
+        "fear": 14,
+        "joy": 16, 
+        "negative": 18, 
+        "positive": 43, 
+        "sadness": 12, 
+        "surprise": 12, 
+        "trust": 28
+    }, 
+    "Mr. Fox": {
+        "anger": 5, 
+        "anticipation": 21, 
+        "disgust": 4, 
+        "fear": 9, 
+        "joy": 23, 
+        "negative": 11, 
+        "positive": 48, 
+        "sadness": 8, 
+        "surprise": 10, 
+        "trust": 20
+    }, 
+    "How Jack Went to Seek his Fortune": {
+        "anger": 5, 
+        "anticipation": 25, 
+        "disgust": 3, 
+        "fear": 5, 
+        "joy": 10, 
+        "negative": 9, 
+        "positive": 14, 
+        "sadness": 3, 
+        "surprise": 12, 
+        "trust": 14
+    }, 
+    "Molly Whuppie": {
+        "anger": 14, 
+        "anticipation": 13, 
+        "disgust": 11, 
+        "fear": 33, 
+        "joy": 4, 
+        "negative": 23, 
+        "positive": 31, 
+        "sadness": 18, 
+        "surprise": 5, 
+        "trust": 7
+    }, 
+    "The Well of the World's End": {
+        "anger": 10, 
+        "anticipation": 21, 
+        "disgust": 7, 
+        "fear": 9, 
+        "joy": 20, 
+        "negative": 28, 
+        "positive": 35, 
+        "sadness": 11, 
+        "surprise": 9, 
+        "trust": 22
+    }, 
+    "The Three Heads of the Well": {
+        "anger": 17,
+        "anticipation": 55, 
+        "disgust": 14, 
+        "fear": 25, 
+        "joy": 57, 
+        "negative": 31, 
+        "positive": 95, 
+        "sadness": 16, 
+        "surprise": 23, 
+        "trust": 33
+    }
+} 

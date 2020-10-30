@@ -1,0 +1,26 @@
+{
+    "Molly Whuppie": {
+        "anger": 14, 
+        "anticipation": 13, 
+        "disgust": 11, 
+        "fear": 33, 
+        "joy": 4, 
+        "negative": 23, 
+        "positive": 31, 
+        "sadness": 18, 
+        "surprise": 5, 
+        "trust": 7
+    }, 
+    "H\u00e4nsel und Gretel:Hansel and Gretel": {
+        "anger": 22, 
+        "anticipation": 72, 
+        "disgust": 27, 
+        "fear": 38, 
+        "joy": 46, 
+        "negative": 83, 
+        "positive": 81, 
+        "sadness": 40, 
+        "surprise": 29, 
+        "trust": 60
+    }
+}

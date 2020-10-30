@@ -1,0 +1,26 @@
+{
+    "How Jack Went to Seek his Fortune": {
+        "anger": 5, 
+        "anticipation": 25, 
+        "disgust": 3, 
+        "fear": 5, 
+        "joy": 10, 
+        "negative": 9, 
+        "positive": 14, 
+        "sadness": 3, 
+        "surprise": 12, 
+        "trust": 14
+    }, 
+    "Die Bremer Stadtmusikanten:The City Musicians of Bremen": {
+        "anger": 10, 
+        "anticipation": 27, 
+        "disgust": 27, 
+        "fear": 21, 
+        "joy": 19, 
+        "negative": 47, 
+        "positive": 41, 
+        "sadness": 17, 
+        "surprise": 13, 
+        "trust": 27
+    }
+}

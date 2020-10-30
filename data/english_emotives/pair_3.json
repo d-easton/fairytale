@@ -1,0 +1,26 @@
+{
+    "The Rose-Tree": {
+        "anger": 16, 
+        "anticipation": 30, 
+        "disgust": 9, 
+        "fear": 15, 
+        "joy": 34,
+        "negative": 32, 
+        "positive": 45, 
+        "sadness": 20, 
+        "surprise": 11, 
+        "trust": 34
+    }, 
+    "Von dem Machandelboom:The Juniper Tree": {
+        "anger": 50, 
+        "anticipation": 97, 
+        "disgust": 41, 
+        "fear": 45, 
+        "joy": 107, 
+        "negative": 114, 
+        "positive": 142,
+        "sadness": 92, 
+        "surprise": 23, 
+        "trust": 97
+    }
+}

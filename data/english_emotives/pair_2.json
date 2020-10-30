@@ -1,0 +1,26 @@
+{
+    "Tom Tit Tot": {
+        "anger": 13, 
+        "anticipation": 28, 
+        "disgust": 11, 
+        "fear": 20, 
+        "joy": 19, 
+        "negative": 41, 
+        "positive": 33, 
+        "sadness": 33, 
+        "surprise": 15, 
+        "trust": 18
+    },
+    "Rumpelstilzchen:Rumpelstiltskin": {
+        "anger": 10, 
+        "anticipation": 32, 
+        "disgust": 9, 
+        "fear": 16, 
+        "joy": 38, 
+        "negative": 21, 
+        "positive": 74, 
+        "sadness": 12, 
+        "surprise": 9, 
+        "trust": 23
+    }
+}
