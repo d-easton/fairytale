@@ -6,7 +6,9 @@
 }
  
  body {
-     background-color: #FFF8F1;
+     /* background-color: #FFF8F1; */
+     background-color: #d3c9ca;
+     
      font-family: 'Montserrat', cursive;
  }
 
@@ -19,9 +21,13 @@
 .spacer {
     height: 90px;
 }
+.spacer-small {
+    height: 45px;
+}
 
 .light { 
-    color:  #FFF8F1;
+    /* color:  #FFF8F1; */
+    color: #f4aacd;
 }
 
 .german-font {
@@ -49,8 +55,8 @@
 }
 
 .navbar-tab { 
-    fill: #FFF8F1;
-    stroke: #221812;
+    fill: #d3c9ca;
+    stroke: #0b0b16;
     stroke-width: 3px;
     /* #221812 */
 
@@ -66,13 +72,13 @@
 }
 
 .active-tab {
-    fill: #221812;
-    stroke: #221812;
+    fill: #0b0b16;
+    stroke: #0b0b16;
     stroke-width: 3px;
 }
 
 .active-tab-txt {
-    fill: #FFF8F1;
+    fill:  #a7b6df;
     font-size: 70px;
     /* stroke: #221812;
     stroke-width: 3px; */
@@ -82,11 +88,12 @@
 
 #lead-card {
     height: 100vh;
-    background-color: #221812;
+    /* background-color: #221812; */
+    background-color: #0b0b16
 }
 
 #nav-card {
-    height: 200vh;
+    height: 40vh;
 }
 
 #splash {
@@ -99,7 +106,8 @@
 
 #title-text {
     font-size: 132px;
-    color: #FFF8F1;;
+    /* color: #FFF8F1; */
+    color: #f4aacd;
 }
 
 #assignment-info {
@@ -108,16 +116,35 @@
     height: 20vh;
     margin-left: 1em;
     
-    color:  #FFF8F1;
+    color:  #f0bdd5;
+}
+#subview-info {
+    /* color: #fffbd1; */
+    color:  #a7b6df;
 }
 
 #nav-head-eng {
     text-align: left;
     padding-left: 240px;
+    /* clip-path: polygon(0% 0%, 100% 50px, 100% 100%, 0% calc(100% - 50px));
+    background-color: #243e86; */
+
+    /* margin-left: 240px;
+    text-align: left;
+    padding: 40px;
+    clip-path: polygon(0px 20%, 95% 20%, 100% 80%, 5% 95%);
+    background-color: #243e86;
+    width: 700px; */
 }
 #nav-head-deu {
     text-align: right;
     padding-right: 240px;
+     /* margin-right: 240px; */
+   /* text-align: right;
+    padding: 40px;
+    clip-path: polygon(0px 20%, 95% 20%, 100% 80%, 5% 95%);
+    background-color: #243e86;
+    width: 700px; */
 }
 
 #navbar {
@@ -130,4 +157,26 @@
 #navbar-wrapper {
     width: 90%;
     margin-left: 5%;
+}
+
+#branches-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 200px;
+    width: 300px;
+}
+
+#column-card {
+    display: flex;
+    flex-direction: row;
+    height: 200vh;    
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+
+    width: 42%;
+    margin-right: 3%;
 }

@@ -13,7 +13,7 @@ function Navbar( stories) {
 
     // self.lengthChartEN = lengthChartEN;
     // self.lengthChartDE = lengthChartDE;
-    // self.votePercentageChart = votePercentageChart;
+    
     self.stories = stories;
     self.init();
 };
@@ -38,9 +38,6 @@ Navbar.prototype.init = function(){
         .attr("width",self.svgWidth)
         .attr("height",self.svgHeight)
 };
-
-
-
 
 /**
  * 
@@ -70,5 +67,4 @@ Navbar.prototype.update = function(){
         .attr("y", 70)
         .text( (d,i) => (i+1)+"." )
         .on("click", (e,d) => handleNavbarClick(d["navNumber"]) );
-    
 };
