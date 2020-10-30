@@ -1,0 +1,50 @@
+{
+    "Die Froschk\u00f6nig oder der eiserne Heinrich:The Frong King, or Iron Henry": {
+        "anger": 11, 
+        "anticipation": 16, 
+        "disgust": 5, 
+        "fear": 13, 
+        "joy": 22, 
+        "negative": 30, 
+        "positive": 73, 
+        "sadness": 18, 
+        "surprise": 11, 
+        "trust": 17
+    }, 
+    "Der Zauberlehrling:The Sorcerer's Apprentice": {
+        "anger": 8, 
+        "anticipation": 12, 
+        "disgust": 13,
+        "fear": 14, 
+        "joy": 8, 
+        "negative": 22, 
+        "positive": 24, 
+        "sadness": 6, 
+        "surprise": 7, 
+        "trust": 19
+    }, 
+    "Daumsdick:Tom Thumb": {
+        "anger": 20, 
+        "anticipation": 44, 
+        "disgust": 23, 
+        "fear": 31, 
+        "joy": 51, 
+        "negative": 59, 
+        "positive": 75, 
+        "sadness": 30, 
+        "surprise": 29, 
+        "trust": 69
+        }, 
+    "Frau Holle:Mother Hulda": {
+        "anger": 10, 
+        "anticipation": 38, 
+        "disgust": 16, 
+        "fear": 10, 
+        "joy": 37, 
+        "negative": 54, 
+        "positive": 59, 
+        "sadness": 33,
+        "surprise": 12, 
+        "trust": 36
+    }, 
+    "H\u00e4nsel und Gretel:Hansel and Gretel": {"anger": 22, "anticipation": 72, "disgust": 27, "fear": 38, "joy": 46, "negative": 83, "positive": 81, "sadness": 40, "surprise": 29, "trust": 60}, "Rumpelstilzchen:Rumpelstiltskin": {"anger": 10, "anticipation": 32, "disgust": 9, "fear": 16, "joy": 38, "negative": 21, "positive": 74, "sadness": 12, "surprise": 9, "trust": 23}, "Die Bremer Stadtmusikanten:The City Musicians of Bremen": {"anger": 10, "anticipation": 27, "disgust": 27, "fear": 21, "joy": 19, "negative": 47, "positive": 41, "sadness": 17, "surprise": 13, "trust": 27}, "Der Teufel mit den drei goldenen Haaren:The Devil with three Golden Hairs": {"anger": 47, "anticipation": 84, "disgust": 57, "fear": 49, "joy": 51, "negative": 87, "positive": 100, "sadness": 47, "surprise": 22, "trust": 42}, "Von dem Machandelboom:The Juniper Tree": {"anger": 50, "anticipation": 97, "disgust": 41, "fear": 45, "joy": 107, "negative": 114, "positive": 142, "sadness": 92, "surprise": 23, "trust": 97}, "Der R\u00e4uberbr\u00e4utigam:The Robber Bridegoom": {"anger": 17, "anticipation": 58, "disgust": 15, "fear": 31, "joy": 43, "negative": 47, "positive": 70, "sadness": 26, "surprise": 14, "trust": 41}}
