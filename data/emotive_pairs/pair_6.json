@@ -9,7 +9,8 @@
         "positive": 48, 
         "sadness": 8, 
         "surprise": 10, 
-        "trust": 20
+        "trust": 20,
+        "length": 1033
     }, 
     "Der R\u00e4uberbr\u00e4utigam:The Robber Bridegoom": {
         "anger": 17, 
@@ -21,6 +22,7 @@
         "positive": 70, 
         "sadness": 26, 
         "surprise": 14, 
-        "trust": 41
+        "trust": 41,
+        "length": 1478
     }
 }

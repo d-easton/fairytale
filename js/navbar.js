@@ -7,12 +7,12 @@
  * @param electionInfo instance of ElectionInfo
  * @param electionWinners data corresponding to the winning parties over mutiple election years
  */
-// function Navbar(lengthChartEN, lengthChartDE, stories) {
-function Navbar( stories) {
+function Navbar(lengthChartEN, lengthChartDE, stories) {
+// function Navbar( stories) {
     let self = this;
 
-    // self.lengthChartEN = lengthChartEN;
-    // self.lengthChartDE = lengthChartDE;
+    self.lengthChartEN = lengthChartEN;
+    self.lengthChartDE = lengthChartDE;
     
     self.stories = stories;
     self.init();
@@ -53,9 +53,9 @@ Navbar.prototype.update = function(){
     nav.enter().append("rect")
         .attr("id", (d) => "story-"+(d["navNumber"]))
         .attr("class", "navbar-tab")
-        .attr("width", "120")
-        .attr("height", "90")
-        .attr("x", (d,i) => i*160)
+        .attr("width", "90")
+        .attr("height", "60")
+        .attr("x", (d,i) => i*115)
         .attr("y", 0)
         .on("click", (e,d) => handleNavbarClick(d["navNumber"]) );
 
@@ -63,8 +63,23 @@ Navbar.prototype.update = function(){
     nav.enter().append("text")
         .attr("id", (d,i) => "story-"+(i+1)+"-text")
         .attr("class", "navbar-tab-txt german-font")
-        .attr("x", (d,i) => 33+(i*160))
-        .attr("y", 70)
+        .attr("x", (d,i) => 27.5+(i*115))
+        .attr("y", 45)
         .text( (d,i) => (i+1)+"." )
-        .on("click", (e,d) => handleNavbarClick(d["navNumber"]) );
+        .on("click", (e,d) => handleNavbarClick(d["navNumber"]).then( (data) => {
+            for (const [key, value] of Object.entries(data)) {
+                const currentLang = determineLanguageFromTitle(key);
+                if(currentLang == "english") {
+                    $("#english-story-title").text(key);
+                    $("#english-col-icon").text(titleIcons[key]);
+                }
+                else if (currentLang == "german") {
+                    cleanedTitles = splitCompoundTitle(key);
+                    $("#german-story-title").text(cleanedTitles[0]);
+                    $("#german-story-subtitle").text('('+cleanedTitles[1]+')');
+                    $("#german-col-icon").text(titleIcons[key]);
+                }
+            }
+            console.log(data);
+        }));
 };

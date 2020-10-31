@@ -9,7 +9,8 @@
         "positive": 14, 
         "sadness": 3, 
         "surprise": 12, 
-        "trust": 14
+        "trust": 14,
+        "length": 646
     }, 
     "Die Bremer Stadtmusikanten:The City Musicians of Bremen": {
         "anger": 10, 
@@ -21,6 +22,7 @@
         "positive": 41, 
         "sadness": 17, 
         "surprise": 13, 
-        "trust": 27
+        "trust": 27,
+        "length": 1245
     }
 }

@@ -9,7 +9,8 @@
         "positive": 99,
         "sadness": 54,
         "surprise": 24,
-        "trust": 52
+        "trust": 52,
+        "length": 879
     },
     "Daumsdick:Tom Thumb": {
         "anger": 20, 
@@ -21,6 +22,7 @@
         "positive": 75, 
         "sadness": 30, 
         "surprise": 29, 
-        "trust": 69
+        "trust": 69,
+        "length": 2503
     }
 }

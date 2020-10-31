@@ -9,7 +9,8 @@
         "positive": 43, 
         "sadness": 12, 
         "surprise": 12, 
-        "trust": 28
+        "trust": 28,
+        "length": 1194
     },
     "Der Teufel mit den drei goldenen Haaren:The Devil with three Golden Hairs": {
         "anger": 47, 
@@ -21,6 +22,7 @@
         "positive": 100, 
         "sadness": 47, 
         "surprise": 22, 
-        "trust": 42
+        "trust": 42,
+        "length": 2551
     }
 }

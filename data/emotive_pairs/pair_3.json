@@ -9,7 +9,8 @@
         "positive": 45, 
         "sadness": 20, 
         "surprise": 11, 
-        "trust": 34
+        "trust": 34,
+        "length": 962
     }, 
     "Von dem Machandelboom:The Juniper Tree": {
         "anger": 50, 
@@ -21,6 +22,7 @@
         "positive": 142,
         "sadness": 92, 
         "surprise": 23, 
-        "trust": 97
+        "trust": 97,
+        "length": 3102
     }
 }

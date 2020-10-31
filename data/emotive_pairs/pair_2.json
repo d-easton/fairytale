@@ -9,7 +9,8 @@
         "positive": 33, 
         "sadness": 33, 
         "surprise": 15, 
-        "trust": 18
+        "trust": 18,
+        "length": 1702
     },
     "Rumpelstilzchen:Rumpelstiltskin": {
         "anger": 10, 
@@ -21,6 +22,7 @@
         "positive": 74, 
         "sadness": 12, 
         "surprise": 9, 
-        "trust": 23
+        "trust": 23,
+        "length": 1139
     }
 }

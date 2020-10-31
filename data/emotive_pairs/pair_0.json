@@ -9,9 +9,10 @@
         "positive": 35, 
         "sadness": 11, 
         "surprise": 9, 
-        "trust": 22
+        "trust": 22,
+        "length": 1116
     }, 
-    "Die Froschk\u00f6nig oder der eiserne Heinrich:The Frong King, or Iron Henry": {
+    "Die Froschk\u00f6nig oder der eiserne Heinrich:The Frog King, or Iron Henry": {
         "anger": 11, 
         "anticipation": 16, 
         "disgust": 5, 
@@ -21,6 +22,7 @@
         "positive": 73, 
         "sadness": 18, 
         "surprise": 11, 
-        "trust": 17
+        "trust": 17,
+        "length": 1203
     }
 }

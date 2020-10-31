@@ -10,8 +10,8 @@
      */
     const init = () => {
         //Creating instances for each visualization
-        // let lengthChartEN = new lengthChartEN();
-        // let lengthChartDE = new lengthChartDE();
+        let lengthChartEN = new LengthChart("english");
+        let lengthChartDE = new LengthChart("german");
 
         // let brushSelection = new BrushSelection();
         // let electoralVoteChart = new ElectoralVoteChart(brushSelection);
@@ -25,8 +25,8 @@
                 console.log(stories);
 
                 //pass the instances of all the charts that update on selection change in navbar
-                // const navbar = new Navbar( lengthChartEN, lengthChartDE, stories );
-                const navbar = new Navbar( stories );
+                const navbar = new Navbar( lengthChartEN, lengthChartDE, stories );
+                // const navbar = new Navbar( stories );
                 navbar.update();
             });
     }

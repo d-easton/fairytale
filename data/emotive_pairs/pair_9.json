@@ -9,7 +9,8 @@
         "positive": 95, 
         "sadness": 16, 
         "surprise": 23, 
-        "trust": 33
+        "trust": 33,
+        "length": 1403
     },
     "Frau Holle:Mother Hulda": {
         "anger": 10, 
@@ -21,6 +22,7 @@
         "positive": 59, 
         "sadness": 33,
         "surprise": 12, 
-        "trust": 36
+        "trust": 36,
+        "length": 1270
     }
 }

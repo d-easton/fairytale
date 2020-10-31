@@ -9,7 +9,8 @@
         "positive": 30, 
         "sadness": 14, 
         "surprise": 5, 
-        "trust": 10
+        "trust": 10,
+        "length": 786
     },
     "Der Zauberlehrling:The Sorcerer's Apprentice": {
         "anger": 8, 
@@ -21,6 +22,7 @@
         "positive": 24, 
         "sadness": 6, 
         "surprise": 7, 
-        "trust": 19
+        "trust": 19,
+        "length": 455
     }
 }

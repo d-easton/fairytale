@@ -72,7 +72,7 @@ def get_title(text_url):
 def generate_corpus(corpus_urls):
     corpus_tokens = {}
     for url in corpus_urls:
-        corpus_tokens[get_title(url)] = import_text(url) 
+        corpus_tokens[get_title(url)] = len(import_text(url))
     return corpus_tokens
 
 # open NCR lexicon, return as a dictionary containing relevant values
@@ -184,14 +184,16 @@ def primary():
     english_corpus = generate_corpus(english_corpus_urls)
     german_corpus = generate_corpus(german_corpus_urls)
 
-    lexicon_path = "./NRC-Emotion-Lexicon-Wordlevel-v0.92.txt"
-    lexicon = compile_lexicon(lexicon_path)
+    print(english_corpus)
+    print(german_corpus)
+    # lexicon_path = "./NRC-Emotion-Lexicon-Wordlevel-v0.92.txt"
+    # lexicon = compile_lexicon(lexicon_path)
 
-    english_emotive_scores = calculate_corpus_emotive_scores(english_corpus, lexicon) 
-    german_emotive_scores = calculate_corpus_emotive_scores(german_corpus, lexicon) 
+    # english_emotive_scores = calculate_corpus_emotive_scores(english_corpus, lexicon) 
+    # german_emotive_scores = calculate_corpus_emotive_scores(german_corpus, lexicon) 
 
-    write_output(english_emotive_scores, "english")
-    write_output(german_emotive_scores, "german")
+    # write_output(english_emotive_scores, "english")
+    # write_output(german_emotive_scores, "german")
 
 if __name__ == "__main__":
     print("launch")
