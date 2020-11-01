@@ -7,8 +7,8 @@
  * @param electionInfo instance of ElectionInfo
  * @param electionWinners data corresponding to the winning parties over mutiple election years
  */
-function Navbar(lengthChartEN, lengthChartDE, stories) {
-// function Navbar( stories) {
+function Navbar( lengthChartEN, lengthChartDE, stories) {
+// function Navbar( stories) {  ,
     let self = this;
 
     self.lengthChartEN = lengthChartEN;
@@ -45,7 +45,15 @@ Navbar.prototype.init = function(){
  */
 Navbar.prototype.update = function(){
     let self = this;
-    // let clicked = null;
+    
+    //Domain and range for length chart rectangle scale
+    let domain = [0, 200];
+    let range = [0, 100];
+
+    //Linear scale for length chart rectangles
+    self.lengthScale = d3.scaleLinear()
+        .domain(domain)
+        .range(range);
 
     // Create the chart by adding circle elements representing each election year, colored based on the winning party
     const nav = d3.select("#navbar-SVG").selectAll("rect").data(self.stories);
@@ -72,14 +80,17 @@ Navbar.prototype.update = function(){
                 if(currentLang == "english") {
                     $("#english-story-title").text(key);
                     $("#english-col-icon").text(titleIcons[key]);
+                    self.lengthChartEN.update( convertLengthToRectWidths( value['length'] ), self.lengthScale );
+
                 }
                 else if (currentLang == "german") {
                     cleanedTitles = splitCompoundTitle(key);
                     $("#german-story-title").text(cleanedTitles[0]);
                     $("#german-story-subtitle").text('('+cleanedTitles[1]+')');
                     $("#german-col-icon").text(titleIcons[key]);
+
+                    self.lengthChartDE.update( convertLengthToRectWidths( value['length'] ), self.lengthScale );
                 }
             }
-            console.log(data);
         }));
 };

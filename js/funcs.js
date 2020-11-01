@@ -52,6 +52,17 @@
 
 const splitCompoundTitle = (rawTitle) => {
     const cleanedTitles = rawTitle.split(":");
-    console.log(cleanedTitles);
     return cleanedTitles;
+}
+
+// convert # of words into story into array of 200 word-long rectangles
+const convertLengthToRectWidths = (length) => {
+    rects = [];
+    let l = length;
+    while (l > 200) {
+        l = l - 200;
+        rects.push(200);
+    }
+    rects.push(l);
+    return rects;
 }

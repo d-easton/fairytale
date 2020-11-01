@@ -99,7 +99,7 @@
     border-radius: 10%;
 }
 #english-col-icon {
-    background-image: linear-gradient(to bottom right, #243e86    , #98a8da);
+    background-image: linear-gradient(to bottom right, #243e86, #98a8da);
     color: #d3c9ca;
 }
 #german-col-icon {
@@ -141,9 +141,8 @@
 
 .text-length-chart {
     width: 100%;
-    height: 10vh;
+    height: 50vh;
 }
-
 
 
 #lead-card {

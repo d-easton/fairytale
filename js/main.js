@@ -10,8 +10,10 @@
      */
     const init = () => {
         //Creating instances for each visualization
-        let lengthChartEN = new LengthChart("english");
-        let lengthChartDE = new LengthChart("german");
+        let lengthChartEN = new EnglishLengthChart("english");
+        let lengthChartDE = new GermanLengthChart("german");
+        // let lengthChartEN = new LengthChart("english");
+        // let lengthChartDE = new LengthChart("german");
 
         // let brushSelection = new BrushSelection();
         // let electoralVoteChart = new ElectoralVoteChart(brushSelection);
@@ -20,9 +22,6 @@
         //pass this data and instances of all the charts that update on story selection to navbar's constructor
         d3.json("/model/key.json")
             .then( (stories) => {
-
-                console.log("main ---");
-                console.log(stories);
 
                 //pass the instances of all the charts that update on selection change in navbar
                 const navbar = new Navbar( lengthChartEN, lengthChartDE, stories );
