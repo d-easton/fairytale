@@ -232,7 +232,7 @@
 #column-card {
     display: flex;
     flex-direction: row;
-    height: 200vh;    
+    height: 225vh;    
 }
 
 .col {
