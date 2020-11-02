@@ -123,7 +123,7 @@
 #german-story-subtitle {
     font-style: italic;
     padding-left: 35px;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .story-title {
@@ -132,7 +132,7 @@
 }
 
 .col-title-card {
-    height: 200px;
+    height: 225px;
     width: 90%;
     margin: 5%;
 }

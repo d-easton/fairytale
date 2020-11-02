@@ -6,11 +6,13 @@
             { "axis": "disgust", "value": 5 }, 
             { "axis": "fear", "value": 14 },
             { "axis": "joy", "value": 16 }, 
-            { "axis": "negative", "value": 18 }, 
-            { "axis": "positive", "value": 43 }, 
             { "axis": "sadness", "value": 12 }, 
             { "axis": "surprise", "value": 12 }, 
             { "axis": "trust", "value": 28 }
+        ],
+        "valence":[
+            { "axis": "negative", "value": 18 }, 
+            { "axis": "positive", "value": 43 }
         ],
         "length": 1194
     },
@@ -21,11 +23,13 @@
             { "axis": "disgust", "value": 57 },
             { "axis": "fear", "value": 49 },
             { "axis": "joy", "value": 51 },
-            { "axis": "negative", "value": 87 },
-            { "axis": "positive", "value": 100 },
             { "axis": "sadness", "value": 47 },
             { "axis": "surprise", "value": 22 },
             { "axis": "trust", "value": 42 }
+        ],
+        "valence":[
+            { "axis": "negative", "value": 87 },
+            { "axis": "positive", "value": 100 }
         ],
         "length": 2551
     }

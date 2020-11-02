@@ -79,26 +79,32 @@ Navbar.prototype.update = function(){
         .on("click", (e,d) => handleNavbarClick(d["navNumber"]).then( (stories) => {    // helper gets story data out of .json files
 
             let maxEmotiveScore = 0;
+            let maxValence = 0;
             for (const [title, data] of Object.entries( stories )) {
                 for (const [index, emotion] of Object.entries( data["emotives"])) {
                     const score = emotion["value"];
                     if ( score > maxEmotiveScore)
                         maxEmotiveScore = score;
                 }
+                for (const [index, valence] of Object.entries( data["valence"])) {
+                    const score = valence["value"];
+                    if ( score > maxEmotiveScore)
+                        maxValence = score;
+                }
             }
-            // round it up to next interval of 50
+            // round them up to next interval of 50
             maxEmotiveScore = Math.round((maxEmotiveScore +25) / 50)*50;
+            maxValence = Math.round((maxValence +25) / 50)*50;
 
             for (const [title, data] of Object.entries( stories )) {
                 const currentLang = determineLanguageFromTitle(title);
-                const radarMargin = {top: 100, right: 100, bottom: 100, left: 100};
                 if(currentLang == "english") {
                     $("#english-story-title").text(title);
                     $("#english-col-icon").text(titleIcons[title]);
 
                     self.lengthChartEN.update( convertLengthToRectWidths( data['length'] ), self.lengthScale );
 
-                    const englishRadarOptions = {
+                    const englishEmotiveOptions = {
                         w: 400,    
                         h: 400, 
                         margin: radarMargin,
@@ -107,9 +113,16 @@ Navbar.prototype.update = function(){
                         roundStrokes: true,
                         color: "#98a8da",
                         colorDark: "#243e86"
-                      };
-                      RadarChart("#english-emotive-chart", data["emotives"], englishRadarOptions);
+                    };
+                    RadarChart("#english-emotive-chart", data["emotives"], englishEmotiveOptions);
                     
+                    const englishValenceOptions = {
+                        w: 450,    
+                        h: 450,
+                        maxValue: maxValence,
+                        color: "#98a8da"
+                    }
+                    ValenceBarChart("#english-valence-chart", data["valence"], englishValenceOptions);
 
                 }
                 else if (currentLang == "german") {
@@ -120,7 +133,7 @@ Navbar.prototype.update = function(){
                     
                     self.lengthChartDE.update( convertLengthToRectWidths( data['length'] ), self.lengthScale );
 
-                    const germanRadarOptions = {
+                    const germanEmotiveOptions = {
                         w: 400,    
                         h: 400, 
                         margin: radarMargin,
@@ -129,8 +142,16 @@ Navbar.prototype.update = function(){
                         roundStrokes: true,
                         color:  "#996ea0",
                         colorDark: "#34385d"
-                      };
-                      RadarChart("#german-emotive-chart", data["emotives"], germanRadarOptions);
+                    };
+                    RadarChart("#german-emotive-chart", data["emotives"], germanEmotiveOptions);
+
+                    const germanValenceOptions = {
+                        w: 450,    
+                        h: 450,
+                        maxValue: maxValence,
+                        color:  "#996ea0"
+                    }
+                    ValenceBarChart("#german-valence-chart", data["valence"], germanValenceOptions);
                 }
             }
 

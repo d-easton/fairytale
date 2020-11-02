@@ -5,27 +5,31 @@
             { "axis": "anticipation", "value": 21 }, 
             { "axis": "disgust", "value": 4 }, 
             { "axis": "fear", "value": 9 }, 
-            { "axis": "joy", "value": 23 }, 
-            { "axis": "negative", "value": 11 }, 
-            { "axis": "positive", "value": 48 }, 
+            { "axis": "joy", "value": 23 },  
             { "axis": "sadness", "value": 8 }, 
             { "axis": "surprise", "value": 10 }, 
             { "axis": "trust", "value": 20 }
+        ],
+        "valence" : [
+            { "axis": "negative", "value": 11 }, 
+            { "axis": "positive", "value": 48 }
         ],
         "length": 1033
     }, 
     "Der R\u00e4uberbr\u00e4utigam:The Robber Bridegoom": {
         "emotives": [
-            { "axis": "anger", "value":17 }, 
-            { "axis": "anticipation", "value":58 }, 
-            { "axis": "disgust", "value":15 }, 
-            { "axis": "fear", "value":31 }, 
-            { "axis":  "joy", "value":43 }, 
-            { "axis": "negative", "value":47 }, 
-            { "axis": "positive", "value":70 }, 
-            { "axis": "sadness", "value":26 }, 
-            { "axis": "surprise", "value":14 }, 
-            { "axis": "trust", "value":41}
+            { "axis": "anger", "value": 17 }, 
+            { "axis": "anticipation", "value": 58 }, 
+            { "axis": "disgust", "value": 15 }, 
+            { "axis": "fear", "value": 31 }, 
+            { "axis":  "joy", "value": 43 }, 
+            { "axis": "sadness", "value": 26 }, 
+            { "axis": "surprise", "value": 14 }, 
+            { "axis": "trust", "value": 41}
+        ],
+        "valence" : [
+            { "axis": "negative", "value": 47 }, 
+            { "axis": "positive", "value": 70 }
         ],
         "length": 1478
     }

@@ -61,4 +61,13 @@ const lengthChartRange = [0, 100];
  
 // Domain and range for navbar svg
 const navSVGDomain = [0,9];
-const navSVGRange = [10,1270];
+const navSVGRange = [10,1100];
+
+// Domain and range for valence bar chart x and y axis scales
+const valenceXScaleDomain = ["positive", "negative"];
+const valenceXScaleRange = [50, 450];
+const valenceYScaleRange = [450, 50];
+
+
+// radar chart stuff
+const radarMargin = {top: 100, right: 100, bottom: 100, left: 100};
