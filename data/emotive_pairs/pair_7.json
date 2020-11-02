@@ -1,28 +1,32 @@
 {
     "How Jack Went to Seek his Fortune": {
-        "anger": 5, 
-        "anticipation": 25, 
-        "disgust": 3, 
-        "fear": 5, 
-        "joy": 10, 
-        "negative": 9, 
-        "positive": 14, 
-        "sadness": 3, 
-        "surprise": 12, 
-        "trust": 14,
+        "emotives": [
+            { "axis": "anger", "value": 5 }, 
+            { "axis": "anticipation", "value": 25 }, 
+            { "axis": "disgust", "value": 3 }, 
+            { "axis": "fear", "value": 5 }, 
+            { "axis": "joy", "value": 10 }, 
+            { "axis": "negative", "value": 9 }, 
+            { "axis": "positive", "value": 14 }, 
+            { "axis": "sadness", "value": 3 }, 
+            { "axis": "surprise", "value": 12 }, 
+            { "axis": "trust", "value": 14 }
+        ],
         "length": 646
     }, 
     "Die Bremer Stadtmusikanten:The City Musicians of Bremen": {
-        "anger": 10, 
-        "anticipation": 27, 
-        "disgust": 27, 
-        "fear": 21, 
-        "joy": 19, 
-        "negative": 47, 
-        "positive": 41, 
-        "sadness": 17, 
-        "surprise": 13, 
-        "trust": 27,
+        "emotives": [
+            { "axis": "anger", "value":10 },
+            { "axis": "anticipation", "value":27 }, 
+            { "axis": "disgust", "value":27 },
+            { "axis": "fear", "value":21 }, 
+            { "axis": "joy", "value":19 }, 
+            { "axis": "negative", "value":47 }, 
+            { "axis": "positive", "value":41 }, 
+            { "axis": "sadness", "value":17 }, 
+            { "axis": "surprise", "value":13 }, 
+            { "axis": "trust", "value":27 }
+        ],
         "length": 1245
     }
 }

@@ -46,14 +46,16 @@ Navbar.prototype.init = function(){
 Navbar.prototype.update = function(){
     let self = this;
     
-    //Domain and range for length chart rectangle scale
-    let domain = [0, 200];
-    let range = [0, 100];
 
-    //Linear scale for length chart rectangles
+    //Linear scale for length charts rectangles
     self.lengthScale = d3.scaleLinear()
-        .domain(domain)
-        .range(range);
+        .domain(lengthChartDomain)
+        .range(lengthChartRange);
+
+    // linear scale for navbar rects
+    self.navScale = d3.scaleLinear()
+        .domain(navSVGDomain)
+        .range(navSVGRange);
 
     // Create the chart by adding circle elements representing each election year, colored based on the winning party
     const nav = d3.select("#navbar-SVG").selectAll("rect").data(self.stories);
@@ -61,9 +63,9 @@ Navbar.prototype.update = function(){
     nav.enter().append("rect")
         .attr("id", (d) => "story-"+(d["navNumber"]))
         .attr("class", "navbar-tab")
-        .attr("width", "90")
-        .attr("height", "60")
-        .attr("x", (d,i) => i*115)
+        .attr("width", "100")
+        .attr("height", "70")
+        .attr("x", (d,i) => self.navScale(i) )
         .attr("y", 0)
         .on("click", (e,d) => handleNavbarClick(d["navNumber"]) );
 
@@ -71,26 +73,66 @@ Navbar.prototype.update = function(){
     nav.enter().append("text")
         .attr("id", (d,i) => "story-"+(i+1)+"-text")
         .attr("class", "navbar-tab-txt german-font")
-        .attr("x", (d,i) => 27.5+(i*115))
-        .attr("y", 45)
+        .attr("x", (d,i) => 30+self.navScale(i))
+        .attr("y", 50)
         .text( (d,i) => (i+1)+"." )
-        .on("click", (e,d) => handleNavbarClick(d["navNumber"]).then( (data) => {
-            for (const [key, value] of Object.entries(data)) {
-                const currentLang = determineLanguageFromTitle(key);
+        .on("click", (e,d) => handleNavbarClick(d["navNumber"]).then( (stories) => {    // helper gets story data out of .json files
+
+            let maxEmotiveScore = 0;
+            for (const [title, data] of Object.entries( stories )) {
+                for (const [index, emotion] of Object.entries( data["emotives"])) {
+                    const score = emotion["value"];
+                    if ( score > maxEmotiveScore)
+                        maxEmotiveScore = score;
+                }
+            }
+            // round it up to next interval of 50
+            maxEmotiveScore = Math.round((maxEmotiveScore +25) / 50)*50;
+
+            for (const [title, data] of Object.entries( stories )) {
+                const currentLang = determineLanguageFromTitle(title);
+                const radarMargin = {top: 100, right: 100, bottom: 100, left: 100};
                 if(currentLang == "english") {
-                    $("#english-story-title").text(key);
-                    $("#english-col-icon").text(titleIcons[key]);
-                    self.lengthChartEN.update( convertLengthToRectWidths( value['length'] ), self.lengthScale );
+                    $("#english-story-title").text(title);
+                    $("#english-col-icon").text(titleIcons[title]);
+
+                    self.lengthChartEN.update( convertLengthToRectWidths( data['length'] ), self.lengthScale );
+
+                    const englishRadarOptions = {
+                        w: 400,    
+                        h: 400, 
+                        margin: radarMargin,
+                        maxValue: maxEmotiveScore,
+                        levels: 5,
+                        roundStrokes: true,
+                        color: "#98a8da",
+                        colorDark: "#243e86"
+                      };
+                      RadarChart("#english-emotive-chart", data["emotives"], englishRadarOptions);
+                    
 
                 }
                 else if (currentLang == "german") {
-                    cleanedTitles = splitCompoundTitle(key);
+                    cleanedTitles = splitCompoundTitle(title);
                     $("#german-story-title").text(cleanedTitles[0]);
                     $("#german-story-subtitle").text('('+cleanedTitles[1]+')');
-                    $("#german-col-icon").text(titleIcons[key]);
+                    $("#german-col-icon").text(titleIcons[title]);
+                    
+                    self.lengthChartDE.update( convertLengthToRectWidths( data['length'] ), self.lengthScale );
 
-                    self.lengthChartDE.update( convertLengthToRectWidths( value['length'] ), self.lengthScale );
+                    const germanRadarOptions = {
+                        w: 400,    
+                        h: 400, 
+                        margin: radarMargin,
+                        maxValue: maxEmotiveScore,
+                        levels: 5,
+                        roundStrokes: true,
+                        color:  "#996ea0",
+                        colorDark: "#34385d"
+                      };
+                      RadarChart("#german-emotive-chart", data["emotives"], germanRadarOptions);
                 }
             }
+
         }));
 };

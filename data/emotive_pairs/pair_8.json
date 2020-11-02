@@ -1,28 +1,32 @@
 {
     "Molly Whuppie": {
-        "anger": 14, 
-        "anticipation": 13, 
-        "disgust": 11, 
-        "fear": 33, 
-        "joy": 4, 
-        "negative": 23, 
-        "positive": 31, 
-        "sadness": 18, 
-        "surprise": 5, 
-        "trust": 7,
+        "emotives" : [
+            { "axis": "anger", "value": 14 }, 
+            { "axis": "anticipation", "value": 13 }, 
+            { "axis": "disgust", "value": 11 }, 
+            { "axis": "fear", "value": 33 }, 
+            { "axis": "joy", "value": 4 }, 
+            { "axis": "negative", "value": 23 }, 
+            { "axis": "positive", "value": 31 }, 
+            { "axis": "sadness", "value": 18 }, 
+            { "axis": "surprise", "value": 5 }, 
+            { "axis": "trust", "value": 7 }
+        ],
         "length": 1391
     }, 
     "H\u00e4nsel und Gretel:Hansel and Gretel": {
-        "anger": 22, 
-        "anticipation": 72, 
-        "disgust": 27, 
-        "fear": 38, 
-        "joy": 46, 
-        "negative": 83, 
-        "positive": 81, 
-        "sadness": 40, 
-        "surprise": 29, 
-        "trust": 60,
+        "emotives": [
+            { "axis": "anger", "value": 22 },
+            { "axis": "anticipation", "value": 72 },
+            { "axis": "disgust", "value": 27 },
+            { "axis": "fear", "value": 38 },
+            { "axis": "joy", "value": 46 },
+            { "axis": "negative", "value": 83 },
+            { "axis":  "positive", "value": 81 },
+            { "axis": "sadness", "value": 40 },
+            { "axis": "surprise", "value": 29 },
+            { "axis": "trust", "value": 60 }
+        ],
         "length": 2934
     }
 }

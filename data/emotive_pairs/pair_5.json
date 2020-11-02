@@ -1,28 +1,32 @@
 {
     "The Fish and the Ring": {
-        "anger": 9, 
-        "anticipation": 30, 
-        "disgust": 5, 
-        "fear": 14,
-        "joy": 16, 
-        "negative": 18, 
-        "positive": 43, 
-        "sadness": 12, 
-        "surprise": 12, 
-        "trust": 28,
+        "emotives": [
+            { "axis": "anger", "value": 9 }, 
+            { "axis": "anticipation", "value": 30 }, 
+            { "axis": "disgust", "value": 5 }, 
+            { "axis": "fear", "value": 14 },
+            { "axis": "joy", "value": 16 }, 
+            { "axis": "negative", "value": 18 }, 
+            { "axis": "positive", "value": 43 }, 
+            { "axis": "sadness", "value": 12 }, 
+            { "axis": "surprise", "value": 12 }, 
+            { "axis": "trust", "value": 28 }
+        ],
         "length": 1194
     },
     "Der Teufel mit den drei goldenen Haaren:The Devil with three Golden Hairs": {
-        "anger": 47, 
-        "anticipation": 84, 
-        "disgust": 57, 
-        "fear": 49, 
-        "joy": 51, 
-        "negative": 87, 
-        "positive": 100, 
-        "sadness": 47, 
-        "surprise": 22, 
-        "trust": 42,
+        "emotives": [
+            { "axis": "anger", "value": 47 },
+            { "axis": "anticipation", "value": 84 },
+            { "axis": "disgust", "value": 57 },
+            { "axis": "fear", "value": 49 },
+            { "axis": "joy", "value": 51 },
+            { "axis": "negative", "value": 87 },
+            { "axis": "positive", "value": 100 },
+            { "axis": "sadness", "value": 47 },
+            { "axis": "surprise", "value": 22 },
+            { "axis": "trust", "value": 42 }
+        ],
         "length": 2551
     }
 }

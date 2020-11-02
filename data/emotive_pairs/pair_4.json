@@ -1,28 +1,32 @@
 {
     "The History of Tom Thumb": {
-        "anger": 36, 
-        "anticipation": 55, 
-        "disgust": 22, 
-        "fear": 47, 
-        "joy": 45, 
-        "negative": 85, 
-        "positive": 99,
-        "sadness": 54,
-        "surprise": 24,
-        "trust": 52,
+        "emotives": [
+            { "axis": "anger", "value": 36}, 
+            { "axis": "anticipation", "value": 55}, 
+            { "axis": "disgust", "value": 22}, 
+            { "axis": "fear", "value": 47}, 
+            { "axis": "joy", "value": 45}, 
+            { "axis": "negative", "value": 85}, 
+            { "axis": "positive", "value": 99},
+            { "axis": "sadness", "value": 54},
+            { "axis": "surprise", "value": 24},
+            { "axis": "trust", "value": 52}
+        ],
         "length": 879
     },
     "Daumsdick:Tom Thumb": {
-        "anger": 20, 
-        "anticipation": 44, 
-        "disgust": 23, 
-        "fear": 31, 
-        "joy": 51, 
-        "negative": 59, 
-        "positive": 75, 
-        "sadness": 30, 
-        "surprise": 29, 
-        "trust": 69,
+        "emotives": [
+            { "axis": "anger", "value": 20 },
+            { "axis": "anticipation", "value": 44 },
+            { "axis": "disgust", "value": 23 },
+            { "axis": "fear", "value": 31 },
+            { "axis": "joy", "value": 51 },
+            { "axis": "negative", "value": 59 },
+            { "axis": "positive", "value": 75 },
+            { "axis": "sadness", "value": 30 },
+            { "axis": "surprise", "value": 29 },
+            { "axis": "trust", "value": 69 }
+        ],
         "length": 2503
     }
 }

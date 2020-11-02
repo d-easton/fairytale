@@ -1,28 +1,32 @@
 {
     "The Rose-Tree": {
-        "anger": 16, 
-        "anticipation": 30, 
-        "disgust": 9, 
-        "fear": 15, 
-        "joy": 34,
-        "negative": 32, 
-        "positive": 45, 
-        "sadness": 20, 
-        "surprise": 11, 
-        "trust": 34,
+        "emotives": [
+            { "axis": "anger", "value": 16 }, 
+            { "axis": "anticipation", "value": 30 }, 
+            { "axis": "disgust", "value": 9 }, 
+            { "axis": "fear", "value": 15 }, 
+            { "axis": "joy", "value": 34 },
+            { "axis": "negative", "value": 32 }, 
+            { "axis": "positive", "value": 45 }, 
+            { "axis": "sadness", "value": 20 }, 
+            { "axis": "surprise", "value": 11 }, 
+            { "axis": "trust", "value": 34 }
+        ],
         "length": 962
     }, 
     "Von dem Machandelboom:The Juniper Tree": {
-        "anger": 50, 
-        "anticipation": 97, 
-        "disgust": 41, 
-        "fear": 45, 
-        "joy": 107, 
-        "negative": 114, 
-        "positive": 142,
-        "sadness": 92, 
-        "surprise": 23, 
-        "trust": 97,
+        "emotives": [
+            { "axis": "anger", "value": 50}, 
+            { "axis": "anticipation", "value": 97}, 
+            { "axis": "disgust", "value": 41}, 
+            { "axis": "fear", "value": 45}, 
+            { "axis": "joy", "value": 107}, 
+            { "axis": "negative", "value": 114}, 
+            { "axis": "positive", "value": 142},
+            { "axis": "sadness", "value": 92}, 
+            { "axis": "surprise", "value": 23}, 
+            { "axis": "trust", "value": 97}
+        ],
         "length": 3102
     }
 }

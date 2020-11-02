@@ -1,28 +1,32 @@
 {
     "The Master and His Pupil": {
-        "anger": 15, 
-        "anticipation": 7,
-        "disgust": 13, 
-        "fear": 15, 
-        "joy": 5, 
-        "negative": 32, 
-        "positive": 30, 
-        "sadness": 14, 
-        "surprise": 5, 
-        "trust": 10,
+        "emotives": [
+            { "axis": "anger", "value": 15 }, 
+            { "axis": "anticipation", "value": 7 },
+            { "axis": "disgust", "value": 13 }, 
+            { "axis": "fear", "value": 15 }, 
+            { "axis": "joy", "value": 5 }, 
+            { "axis": "negative", "value": 32 }, 
+            { "axis": "positive", "value": 30 }, 
+            { "axis": "sadness", "value": 14 }, 
+            { "axis": "surprise", "value": 5 }, 
+            { "axis": "trust", "value": 10 }
+        ],
         "length": 786
     },
     "Der Zauberlehrling:The Sorcerer's Apprentice": {
-        "anger": 8, 
-        "anticipation": 12, 
-        "disgust": 13,
-        "fear": 14, 
-        "joy": 8, 
-        "negative": 22, 
-        "positive": 24, 
-        "sadness": 6, 
-        "surprise": 7, 
-        "trust": 19,
-        "length": 455
+        "emotives": [
+            { "axis": "anger", "value": 8 }, 
+            { "axis": "anticipation", "value": 12 }, 
+            { "axis": "disgust", "value": 13 },
+            { "axis": "fear", "value": 14 }, 
+            { "axis": "joy", "value": 8 }, 
+            { "axis": "negative", "value": 22 }, 
+            { "axis": "positive", "value": 24 }, 
+            { "axis": "sadness", "value": 6 }, 
+            { "axis": "surprise", "value": 7 }, 
+            { "axis": "trust", "value": 19 }
+        ],
+        "length" : 455 
     }
 }

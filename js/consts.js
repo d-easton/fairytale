@@ -53,3 +53,12 @@
     "Molly Whuppie": "M",
     "The Three Heads of the Well": "H"
  };
+
+
+//Domain and range for length chart rectangle scale
+const lengthChartDomain = [0, 200];
+const lengthChartRange = [0, 100];
+ 
+// Domain and range for navbar svg
+const navSVGDomain = [0,9];
+const navSVGRange = [10,1270];

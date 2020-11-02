@@ -1,28 +1,32 @@
 {
     "Mr. Fox": {
-        "anger": 5, 
-        "anticipation": 21, 
-        "disgust": 4, 
-        "fear": 9, 
-        "joy": 23, 
-        "negative": 11, 
-        "positive": 48, 
-        "sadness": 8, 
-        "surprise": 10, 
-        "trust": 20,
+        "emotives": [
+            { "axis": "anger", "value": 5 }, 
+            { "axis": "anticipation", "value": 21 }, 
+            { "axis": "disgust", "value": 4 }, 
+            { "axis": "fear", "value": 9 }, 
+            { "axis": "joy", "value": 23 }, 
+            { "axis": "negative", "value": 11 }, 
+            { "axis": "positive", "value": 48 }, 
+            { "axis": "sadness", "value": 8 }, 
+            { "axis": "surprise", "value": 10 }, 
+            { "axis": "trust", "value": 20 }
+        ],
         "length": 1033
     }, 
     "Der R\u00e4uberbr\u00e4utigam:The Robber Bridegoom": {
-        "anger": 17, 
-        "anticipation": 58, 
-        "disgust": 15, 
-        "fear": 31, 
-        "joy": 43, 
-        "negative": 47, 
-        "positive": 70, 
-        "sadness": 26, 
-        "surprise": 14, 
-        "trust": 41,
+        "emotives": [
+            { "axis": "anger", "value":17 }, 
+            { "axis": "anticipation", "value":58 }, 
+            { "axis": "disgust", "value":15 }, 
+            { "axis": "fear", "value":31 }, 
+            { "axis":  "joy", "value":43 }, 
+            { "axis": "negative", "value":47 }, 
+            { "axis": "positive", "value":70 }, 
+            { "axis": "sadness", "value":26 }, 
+            { "axis": "surprise", "value":14 }, 
+            { "axis": "trust", "value":41}
+        ],
         "length": 1478
     }
 }

@@ -1,28 +1,32 @@
 {
     "Tom Tit Tot": {
-        "anger": 13, 
-        "anticipation": 28, 
-        "disgust": 11, 
-        "fear": 20, 
-        "joy": 19, 
-        "negative": 41, 
-        "positive": 33, 
-        "sadness": 33, 
-        "surprise": 15, 
-        "trust": 18,
+        "emotives": [
+            { "axis": "anger", "value": 13 }, 
+            { "axis":"anticipation", "value": 28 }, 
+            { "axis":"disgust", "value": 11 }, 
+            { "axis":"fear", "value": 20 }, 
+            { "axis":"joy", "value": 19 }, 
+            { "axis":"negative", "value": 41 }, 
+            { "axis": "positive", "value": 33 }, 
+            { "axis":"sadness", "value": 33 }, 
+            { "axis":"surprise", "value": 15 }, 
+            { "axis":"trust", "value": 18 }
+        ],
         "length": 1702
     },
     "Rumpelstilzchen:Rumpelstiltskin": {
-        "anger": 10, 
-        "anticipation": 32, 
-        "disgust": 9, 
-        "fear": 16, 
-        "joy": 38, 
-        "negative": 21, 
-        "positive": 74, 
-        "sadness": 12, 
-        "surprise": 9, 
-        "trust": 23,
+        "emotives": [
+            { "axis": "anger", "value":10 }, 
+            { "axis": "anticipation", "value":32 }, 
+            { "axis": "disgust", "value":9 }, 
+            { "axis": "fear", "value":16 }, 
+            { "axis": "joy", "value":38 }, 
+            { "axis": "negative", "value":21 }, 
+            { "axis": "positive", "value":74 }, 
+            { "axis": "sadness", "value":12 }, 
+            { "axis": "surprise", "value":9 }, 
+            { "axis": "trust", "value":23 }
+        ],
         "length": 1139
     }
 }

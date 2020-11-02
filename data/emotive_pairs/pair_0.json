@@ -1,28 +1,32 @@
 {
     "The Well of the World's End": {
-        "anger": 10, 
-        "anticipation": 21, 
-        "disgust": 7, 
-        "fear": 9, 
-        "joy": 20, 
-        "negative": 28, 
-        "positive": 35, 
-        "sadness": 11, 
-        "surprise": 9, 
-        "trust": 22,
+        "emotives": [
+            { "axis": "anger", "value": 10 }, 
+            { "axis": "anticipation", "value": 21 }, 
+            { "axis": "disgust", "value": 7 },
+            { "axis": "fear", "value": 9 },
+            { "axis": "joy", "value": 20 },
+            { "axis": "negative", "value": 28 },
+            { "axis": "positive", "value": 35 },
+            { "axis": "sadness", "value": 11 }, 
+            { "axis": "surprise", "value": 9 },
+            { "axis": "trust", "value": 22 }
+        ],
         "length": 1116
     }, 
     "Die Froschk\u00f6nig oder der eiserne Heinrich:The Frog King, or Iron Henry": {
-        "anger": 11, 
-        "anticipation": 16, 
-        "disgust": 5, 
-        "fear": 13, 
-        "joy": 22, 
-        "negative": 30, 
-        "positive": 73, 
-        "sadness": 18, 
-        "surprise": 11, 
-        "trust": 17,
+        "emotives": [
+            { "axis": "anger", "value": 11 }, 
+            { "axis":"anticipation", "value": 16 }, 
+            { "axis":"disgust", "value": 5 }, 
+            { "axis":"fear", "value": 13 }, 
+            { "axis":"joy", "value": 22 }, 
+            { "axis":"negative", "value": 30 }, 
+            { "axis":"positive", "value": 73 }, 
+            { "axis":"sadness", "value": 18 }, 
+            { "axis":"surprise", "value": 11 }, 
+            { "axis":"trust", "value": 17 }
+        ],
         "length": 1203
     }
 }

@@ -1,28 +1,32 @@
 {
     "The Three Heads of the Well": {
-        "anger": 17,
-        "anticipation": 55, 
-        "disgust": 14, 
-        "fear": 25, 
-        "joy": 57, 
-        "negative": 31, 
-        "positive": 95, 
-        "sadness": 16, 
-        "surprise": 23, 
-        "trust": 33,
+        "emotives" : [
+            { "axis": "anger", "value": 17 },
+            { "axis": "anticipation", "value": 55 }, 
+            { "axis": "disgust", "value": 14 }, 
+            { "axis": "fear", "value": 25 }, 
+            { "axis": "joy", "value": 57 }, 
+            { "axis": "negative", "value": 31 }, 
+            { "axis": "positive", "value": 95 }, 
+            { "axis": "sadness", "value": 16 }, 
+            { "axis": "surprise", "value": 23 }, 
+            { "axis": "trust", "value": 33 }
+        ],
         "length": 1403
     },
     "Frau Holle:Mother Hulda": {
-        "anger": 10, 
-        "anticipation": 38, 
-        "disgust": 16, 
-        "fear": 10, 
-        "joy": 37, 
-        "negative": 54, 
-        "positive": 59, 
-        "sadness": 33,
-        "surprise": 12, 
-        "trust": 36,
+        "emotives" : [
+            { "axis": "anger", "value": 10 }, 
+            { "axis": "anticipation", "value": 38 }, 
+            { "axis": "disgust", "value": 16 }, 
+            { "axis": "fear", "value": 10 }, 
+            { "axis": "joy", "value": 37 }, 
+            { "axis": "negative", "value": 54 }, 
+            { "axis": "positive", "value": 59 }, 
+            { "axis": "sadness", "value": 33 },
+            { "axis": "surprise", "value": 12 }, 
+            { "axis": "trust", "value": 36 }
+        ],
         "length": 1270
     }
 }
