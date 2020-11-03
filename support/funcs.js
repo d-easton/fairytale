@@ -8,6 +8,8 @@
 
  const handleNavbarClick = (id) => {
 
+    console.log("CLICK RECEIVED");
+
     // toggle active story
     const tabPrefix = "#story-";
     if ( d3.select(tabPrefix+id).classed("active-tab") ) {
@@ -20,10 +22,8 @@
         turnOffOtherTabs(id);
     }
 
-    id = id-1;
-    // load json for given story pair, then update all charts
-    // const extractYear = id.substring(10);
-    return d3.json("../data/emotive_pairs/pair_"+id+".json"); 
+    // return the loaded json for the relevant story
+    return d3.json("../data/emotive_pairs/pair_"+(id-1)+".json"); 
     
  }
 

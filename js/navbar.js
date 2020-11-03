@@ -7,12 +7,9 @@
  * @param electionInfo instance of ElectionInfo
  * @param electionWinners data corresponding to the winning parties over mutiple election years
  */
-function Navbar( lengthChartEN, lengthChartDE, stories) {
-// function Navbar( stories) {  ,
-    let self = this;
 
-    self.lengthChartEN = lengthChartEN;
-    self.lengthChartDE = lengthChartDE;
+function Navbar( stories) { 
+    let self = this;
     
     self.stories = stories;
     self.init();
@@ -46,12 +43,6 @@ Navbar.prototype.init = function(){
 Navbar.prototype.update = function(){
     let self = this;
     
-
-    //Linear scale for length charts rectangles
-    self.lengthScale = d3.scaleLinear()
-        .domain(lengthChartDomain)
-        .range(lengthChartRange);
-
     // linear scale for navbar rects
     self.navScale = d3.scaleLinear()
         .domain(navSVGDomain)
@@ -60,6 +51,7 @@ Navbar.prototype.update = function(){
     // Create the chart by adding circle elements representing each election year, colored based on the winning party
     const nav = d3.select("#navbar-SVG").selectAll("rect").data(self.stories);
 
+
     nav.enter().append("rect")
         .attr("id", (d) => "story-"+(d["navNumber"]))
         .attr("class", "navbar-tab")
@@ -67,7 +59,9 @@ Navbar.prototype.update = function(){
         .attr("height", "70")
         .attr("x", (d,i) => self.navScale(i) )
         .attr("y", 0)
-        .on("click", (e,d) => handleNavbarClick(d["navNumber"]) );
+        .on("click", (e,d) => handleNavbarClick(d["navNumber"]).then( (stories) => {    // helper gets story data out of .json files
+            RenderCharts(stories);
+        }));
 
     //Append text information of each year right below the corresponding circle
     nav.enter().append("text")
@@ -77,83 +71,6 @@ Navbar.prototype.update = function(){
         .attr("y", 50)
         .text( (d,i) => (i+1)+"." )
         .on("click", (e,d) => handleNavbarClick(d["navNumber"]).then( (stories) => {    // helper gets story data out of .json files
-
-            let maxEmotiveScore = 0;
-            let maxValence = 0;
-            for (const [title, data] of Object.entries( stories )) {
-                for (const [index, emotion] of Object.entries( data["emotives"])) {
-                    const score = emotion["value"];
-                    if ( score > maxEmotiveScore)
-                        maxEmotiveScore = score;
-                }
-                for (const [index, valence] of Object.entries( data["valence"])) {
-                    const score = valence["value"];
-                    if ( score > maxEmotiveScore)
-                        maxValence = score;
-                }
-            }
-            // round them up to next interval of 50
-            maxEmotiveScore = Math.round((maxEmotiveScore +25) / 50)*50;
-            maxValence = Math.round((maxValence +25) / 50)*50;
-
-            for (const [title, data] of Object.entries( stories )) {
-                const currentLang = determineLanguageFromTitle(title);
-                if(currentLang == "english") {
-                    $("#english-story-title").text(title);
-                    $("#english-col-icon").text(titleIcons[title]);
-
-                    self.lengthChartEN.update( convertLengthToRectWidths( data['length'] ), self.lengthScale );
-
-                    const englishEmotiveOptions = {
-                        w: 400,    
-                        h: 400, 
-                        margin: radarMargin,
-                        maxValue: maxEmotiveScore,
-                        levels: 5,
-                        roundStrokes: true,
-                        color: "#98a8da",
-                        colorDark: "#243e86"
-                    };
-                    RadarChart("#english-emotive-chart", data["emotives"], englishEmotiveOptions);
-                    
-                    const englishValenceOptions = {
-                        w: 450,    
-                        h: 450,
-                        maxValue: maxValence,
-                        color: "#98a8da"
-                    }
-                    ValenceBarChart("#english-valence-chart", data["valence"], englishValenceOptions);
-
-                }
-                else if (currentLang == "german") {
-                    cleanedTitles = splitCompoundTitle(title);
-                    $("#german-story-title").text(cleanedTitles[0]);
-                    $("#german-story-subtitle").text('('+cleanedTitles[1]+')');
-                    $("#german-col-icon").text(titleIcons[title]);
-                    
-                    self.lengthChartDE.update( convertLengthToRectWidths( data['length'] ), self.lengthScale );
-
-                    const germanEmotiveOptions = {
-                        w: 400,    
-                        h: 400, 
-                        margin: radarMargin,
-                        maxValue: maxEmotiveScore,
-                        levels: 5,
-                        roundStrokes: true,
-                        color:  "#996ea0",
-                        colorDark: "#34385d"
-                    };
-                    RadarChart("#german-emotive-chart", data["emotives"], germanEmotiveOptions);
-
-                    const germanValenceOptions = {
-                        w: 450,    
-                        h: 450,
-                        maxValue: maxValence,
-                        color:  "#996ea0"
-                    }
-                    ValenceBarChart("#german-valence-chart", data["valence"], germanValenceOptions);
-                }
-            }
-
+            RenderCharts(stories);
         }));
-};
+}

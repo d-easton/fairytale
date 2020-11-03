@@ -10,9 +10,9 @@
      */
     const init = () => {
         //Creating instances for each visualization
-        let lengthChartEN = new EnglishLengthChart("english");
-        let lengthChartDE = new GermanLengthChart("german");
-        // let lengthChartEN = new LengthChart("english");
+        // let lengthChartEN = new EnglishLengthChart("english");
+        // let lengthChartDE = new GermanLengthChart("german");
+        // // let lengthChartEN = new LengthChart("english");
         // let lengthChartDE = new LengthChart("german");
 
         // let brushSelection = new BrushSelection();
@@ -24,7 +24,7 @@
             .then( (stories) => {
 
                 //pass the instances of all the charts that update on selection change in navbar
-                const navbar = new Navbar( lengthChartEN, lengthChartDE, stories );
+                const navbar = new Navbar( stories );
                 // const navbar = new Navbar( stories );
                 navbar.update();
             });

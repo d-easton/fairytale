@@ -1,6 +1,8 @@
 
 
 /**
+ * Method to create a Valence BarChart
+ *  - Creating chart via pure function rather than prototype inspired by work done by Nadieh Bremer
  * 
  * @param id of chart to select, based on language 
  * @param data of valence for given story
@@ -16,24 +18,24 @@ const ValenceBarChart = (id, data, options) => {
 	};
 	
 	//Convert incoming options argument, overwriting defaults stored in activeOptions dictionary above
-	if('undefined' !== typeof options)
+	if('undefined' == typeof options)
+		console.log("NOTICE: No options identified for chart at "+id+": using default settings.");
+	else
 		for(let i in options)
 			if('undefined' !== typeof options[i])
 				activeOptions[i] = options[i];
-	
-	
-    console.log(data);
-    console.log(options);
-    console.log(id);
-    console.log("BRO")
-    console.log(activeOptions.w + activeOptions.margin.left + activeOptions.margin.right);
-    console.log(activeOptions.h + activeOptions.margin.top + activeOptions.margin.bottom);
     
-    d3.select(id).select("svg").remove();
-	const svg = d3.select(id).append("svg")
+    // clear possible previous SVG and create a new one
+    d3.select(id).select("svg")
+        .remove();
+    const svg = d3.select(id)
+        .append("svg")
 			.attr("width",  activeOptions.w + activeOptions.margin.left + activeOptions.margin.right)
 			.attr("height", activeOptions.h + activeOptions.margin.top + activeOptions.margin.bottom)
-			.attr("class", "valence_bar_chart_"+id);	
+            .attr("class", "valence_bar_chart_"+id);
+            
+    // Call tooltip
+	svg.call(tip);
 
     const valenceScale = d3.scaleBand()
         .domain( valenceXScaleDomain )
@@ -73,6 +75,7 @@ const ValenceBarChart = (id, data, options) => {
         
     svg.selectAll("rect").data(data)
         .enter().append("rect")
+        .merge(svg)
             .attr("transform", "translate(460, 900) rotate(180)") 
             .attr("x", (d) => valenceScale( d["axis"] ) )
             .attr("y", 450)
@@ -80,4 +83,9 @@ const ValenceBarChart = (id, data, options) => {
             .attr("width", 120 )
             .style("fill", activeOptions.color)
             .style("opacity", 0.5)
+
+            .on('mouseover', (event, d) => {
+				tip.show(event, d); 
+			})
+			.on('mouseout', tip.hide )
 }

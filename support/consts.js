@@ -55,9 +55,16 @@
  };
 
 
-//Domain and range for length chart rectangle scale
+// Domain and range for length chart rectangle scale
 const lengthChartDomain = [0, 200];
 const lengthChartRange = [0, 100];
+
+// Linear scale for length charts rectangles
+const lengthScale = d3.scaleLinear()
+        .domain(lengthChartDomain)
+        .range(lengthChartRange);
+
+
  
 // Domain and range for navbar svg
 const navSVGDomain = [0,9];
