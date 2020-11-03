@@ -1,3 +1,10 @@
+/**
+ * Quantity visualization for story length
+ * 
+ * @param {*} id - id of the relevant html div to which length chart will be appended
+ * @param {*} data - length data, parsed from .json containing story pairs
+ * @param {*} options - options to override default settings for this chart ( see navbar )
+ */
 const LengthChart = (id, data, options) => {
     let activeOptions = {
 		w: 500,				

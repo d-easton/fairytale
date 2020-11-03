@@ -63,7 +63,7 @@ Navbar.prototype.update = function(){
             RenderCharts(stories);
         }));
 
-    //Append text information of each year right below the corresponding circle
+    // Append text information of each year right below the corresponding circle
     nav.enter().append("text")
         .attr("id", (d,i) => "story-"+(i+1)+"-text")
         .attr("class", "navbar-tab-txt german-font")

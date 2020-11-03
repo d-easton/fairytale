@@ -1,14 +1,7 @@
-/////////////////////////////////////////////////////////
-/////////////// The Radar Chart Function ////////////////
-/////////////// Written by Nadieh Bremer ////////////////
-////////////////// VisualCinnamon.com ///////////////////
-/////////// Inspired by the code of alangrafu ///////////
-/////////////////////////////////////////////////////////
-
 /**
  * Radar blob chart for emotive strength, axes based of categories supplied in the NCR lexicon
  * 	- Original idea to make a radar chart inspired by the API created alangrafu
- *  - Blob-style design, plus radar chart as pure function rather than prototype inspired by work done by  Nadieh Bremer
+ *  - Blob-style design, plus radar chart as pure function rather than prototype inspired by work done by Nadieh Bremer
  */
 
 /**
@@ -26,10 +19,10 @@ const RadarChart = (id, data, options) => {
 		originY: 0,
 		
 		levels: 3,				
-		maxValue: 0, 		// largest possible value for any axis
+		maxValue: 0, 		
 
-		labelFactor: 1.25, 	//Space label from axes end
-		wrapWidth: 60, 		//The number of pixels after which text in a label needs to be given a new line
+		labelFactor: 1.25, 	// space label from end of the axis
+		wrapWidth: 60, 		// pixels after which text in a label will overflow to new line 
 	};
 	
 	//Convert incoming options argument, overwriting defaults stored in activeOptions dictionary above
@@ -46,7 +39,7 @@ const RadarChart = (id, data, options) => {
 	data.forEach ((elem) => axes.push(elem["axis"]) )
 	
 	// configure background circle stuff
-	const total = axes.length; 											// Total number of  axes
+	const total = axes.length; 												// Total number of axes
 	const radius = Math.min(activeOptions.w/2, activeOptions.h/2); 			// Radius of the outermost circle
 	const radiusFactor = radius/activeOptions.levels;
 	const angleRadians = Math.PI * 2 / total;								// The width in radians of each "slice" of the radar chart
@@ -57,7 +50,6 @@ const RadarChart = (id, data, options) => {
 	const radiusScale = d3.scaleLinear()
 		.range([0, radius])
 		.domain([0, maxValue]);
-		
 
 
 	// Set up canvas
