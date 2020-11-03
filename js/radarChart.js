@@ -97,34 +97,33 @@ const RadarChart = (id, data, options) => {
 			.attr("fill", "#737373")
 			.text( (d) => maxValue * d/activeOptions.levels );
 
-
 	// Draw the axes	
+		/// for some reason, enter -> append is not working here. Simply appending working fine so sticking with that
 	const axis = axisGrid.selectAll(".axis").data(axes)
-		.enter().append("g")
+		.enter()
+			.append("g")
 			.attr("class", "axis");
 
+	//Append the lines
 	axis
-		.enter().append("line")
-			.attr( "x1", activeOptions.originX )
-			.attr( "y1", activeOptions.originY )
-			.attr( "x2", (d, i) => radiusScale(maxValue * 1.1) * Math.cos(angleRadians * i - Math.PI/2) )
-			.attr( "y2", (d, i) => radiusScale(maxValue * 1.1) * Math.sin(angleRadians * i - Math.PI/2) )
-			.attr( "class", "line" )
-			.style( "stroke", circleColor )
-			.style( "stroke-width", "2px" );
+		.append("line")
+			.attr("x1", activeOptions.originX)
+			.attr("y1", activeOptions.originY)
+			.attr("x2", (d, i) => radiusScale(maxValue*1.1) * Math.cos(angleRadians*i - Math.PI/2) )
+			.attr("y2", (d, i) => radiusScale(maxValue*1.1) * Math.sin(angleRadians*i - Math.PI/2) )
+			.style("stroke", "white")
+			.style("stroke-width", "2px");
 
-	// Label the axes
+	// Label the Axes
 	axis
-		.enter().append("text")
-			.attr( "class", "legend")
-			.style( "font-size", "11px")
-			.attr( "text-anchor", "middle")
-			.attr( "dy", "0.35em")
-			.attr( "x", (d, i) => radiusScale(maxValue * activeOptions.labelFactor) * Math.cos( angleRadians * i - Math.PI/2) )
-			.attr( "y", (d, i) => radiusScale(maxValue * activeOptions.labelFactor) * Math.sin( angleRadians * i - Math.PI/2) )
-			.text( (d) => d )
+		.append("text")
+			.style("font-size", "11px")
+			.attr("text-anchor", "middle")
+			.attr("dy", "0.35em")
+			.attr("x", (d, i) => radiusScale(maxValue * activeOptions.labelFactor) * Math.cos(angleRadians*i - Math.PI/2))
+			.attr("y", (d, i) => radiusScale(maxValue * activeOptions.labelFactor) * Math.sin(angleRadians*i - Math.PI/2))
+			.text((d) => d)
 			.call(wrap, activeOptions.wrapWidth);
-
 	
 	// Draw blobs and anchor circles
 	
